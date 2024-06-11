@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "838367433326",
+    "project_id": "diagnozepro-658a8",
+    "storage_bucket": "diagnozepro-658a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838367433326:android:ff8e3e7fe470e570f44c7f",
+        "android_client_info": {
+          "package_name": "com.example.diagnozepro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqUpENgqIR-a5zhVVEWRHhNNdma8-uB5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

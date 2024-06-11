@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav"
+    app:startDestination="@id/appointmentsFragment2">
+
+    <fragment
+        android:id="@+id/appointmentsFragment2"
+        android:name="com.example.diagnozepro.user.fragments.AppointmentsFragment"
+        android:label="fragment_appointments"
+        tools:layout="@layout/fragment_appointments" />
+    <fragment
+        android:id="@+id/userProfileFragment2"
+        android:name="com.example.diagnozepro.user.fragments.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/doctorChatsFragment2"
+        android:name="com.example.diagnozepro.user.fragments.DoctorChatsFragment"
+        android:label="fragment_doctor_chats"
+        tools:layout="@layout/fragment_doctor_chats" />
+
+</navigation>

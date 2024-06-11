@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".user.fragments.BookAppointmentFragment">
+
+    <TextView
+        android:id="@+id/tvDoctors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main"
+        android:gravity="center"
+        android:text="Book Appointment"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:elevation="5dp"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvDoctors">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:textColorHint="@color/main"
+                app:boxStrokeColor="@color/main"
+                android:layout_marginTop="25dp"
+                app:hintTextColor="@color/main">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter appointment title"
+                    android:textColor="@color/main"
+                    android:inputType="text"
+                    android:visibility="visible" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:textColorHint="@color/main"
+                app:boxStrokeColor="@color/main"
+                android:layout_marginTop="15dp"
+                app:hintTextColor="@color/main">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select appointment date &amp; time"
+                    android:textColor="@color/main"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:visibility="visible" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:textColorHint="@color/main"
+                app:boxStrokeColor="@color/main"
+                android:layout_marginTop="15dp"
+                app:hintTextColor="@color/main">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter appointment details"
+                    android:textColor="@color/main"
+                    android:inputType="text"
+                    android:visibility="visible" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBookAppointment"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_corners"
+                android:backgroundTint="@color/main"
+                android:layout_gravity="center"
+                android:text="Book Appointment"
+                android:textAllCaps="false"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-black"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

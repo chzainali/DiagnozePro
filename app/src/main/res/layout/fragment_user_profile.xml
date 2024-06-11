@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".user.fragments.UserProfileFragment">
+
+    <TextView
+        android:id="@+id/tvDoctors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main"
+        android:gravity="center"
+        android:text="Profile"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvDoctors">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/main"
+                app:civ_border_width="2dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:drawableStart="@drawable/ic_baseline_person_24"
+                    android:drawableTint="@color/main"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"
+                    android:drawableStart="@drawable/ic_baseline_phone_24"
+                    android:drawableTint="@color/main"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawableTint="@color/main"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tvLicenseCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="License Code"
+                    android:drawableStart="@drawable/baseline_code_24"
+                    android:drawableTint="@color/main"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tvExpertise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Expertise"
+                    android:drawableStart="@drawable/baseline_details_24"
+                    android:drawableTint="@color/main"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tvAvailability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Availability"
+                    android:drawableStart="@drawable/baseline_access_time_filled_24"
+                    android:drawableTint="@color/main"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:drawableStart="@drawable/baseline_location_searching_24"
+                    android:drawableTint="@color/main"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+
+                <TextView
+                    android:id="@+id/tvDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Details"
+                    android:drawableStart="@drawable/baseline_details_24"
+                    android:drawableTint="@color/main"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/main"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogout"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_corners"
+                android:backgroundTint="@color/main"
+                android:layout_gravity="center"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-black"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

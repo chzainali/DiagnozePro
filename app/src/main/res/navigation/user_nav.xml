@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav"
+    app:startDestination="@id/doctorFragment">
+
+    <fragment
+        android:id="@+id/doctorFragment"
+        android:name="com.example.diagnozepro.user.fragments.DoctorFragment"
+        android:label="fragment_doctor"
+        tools:layout="@layout/fragment_doctor" >
+        <action
+            android:id="@+id/action_doctorFragment_to_doctorDetailsFragment"
+            app:destination="@id/doctorDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorDetailsFragment"
+        android:name="com.example.diagnozepro.user.fragments.DoctorDetailsFragment"
+        android:label="fragment_doctor_details"
+        tools:layout="@layout/fragment_doctor_details" >
+
+        <action
+            android:id="@+id/action_doctorDetailsFragment_to_bookAppointmentFragment2"
+            app:destination="@id/bookAppointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorChatsFragment"
+        android:name="com.example.diagnozepro.user.fragments.DoctorChatsFragment"
+        android:label="fragment_doctor_chats"
+        tools:layout="@layout/fragment_doctor_chats" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.diagnozepro.user.fragments.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.example.diagnozepro.user.fragments.AppointmentsFragment"
+        android:label="fragment_appointments"
+        tools:layout="@layout/fragment_appointments" />
+    <fragment
+        android:id="@+id/bookAppointmentFragment"
+        android:name="com.example.diagnozepro.user.fragments.BookAppointmentFragment"
+        android:label="fragment_book_appointment"
+        tools:layout="@layout/fragment_book_appointment" />
+
+
+</navigation>

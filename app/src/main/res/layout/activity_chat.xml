@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            app:tint="@color/white"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="20dp"
+            android:layout_centerVertical="true"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile"
+            android:layout_toEndOf="@+id/ivBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:civ_border_color="@color/white"
+            android:layout_centerVertical="true"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/profile"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/ivProfile"
+            android:text="Admin"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rlTop"
+        android:background="@color/main" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycleView"
+        android:layout_below="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottom"
+        android:background="@android:color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/white"
+        android:paddingVertical="5dp"
+        android:layout_alignParentBottom="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImage"
+            android:visibility="gone"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            android:elevation="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="-2dp"
+            android:layout_marginHorizontal="5dp">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/rlField"
+            android:layout_below="@+id/cvImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_corners">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMic"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/mic"
+                android:layout_centerVertical="true"
+                android:paddingVertical="10dp"
+                android:paddingStart="7dp"
+                android:paddingEnd="3dp"
+                android:tint="@color/main"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etMessage"
+                android:layout_toEndOf="@+id/ivMic"
+                android:layout_toStartOf="@+id/ivLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type a message..."
+                android:textSize="16sp"
+                android:layout_marginVertical="5dp"
+                android:layout_centerVertical="true"
+                android:inputType="textMultiLine"
+                android:background="@color/white"
+                android:textColorHint="@color/main"
+                android:textColor="@color/main" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_link_24"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/ivSend"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="5dp"
+                android:tint="@color/main"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_send_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="5dp"
+                android:paddingVertical="10dp"
+                android:tint="@color/main"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
